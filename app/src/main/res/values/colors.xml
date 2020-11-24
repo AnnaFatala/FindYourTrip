@@ -8,5 +8,7 @@
     <color name="branco">#FFFFFF</color>
     <color name="fundo_card">#F1DCDC</color>
     <color name="azul">#3F51B5</color>
+    <color name="corPrimaria">#4D05CC</color>
+    <color name="corBotao">#36058E</color>
 
 </resources>

@@ -1,0 +1,411 @@
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(revision 43c3df07f82d83bbbe0cf9454b2a120457d7ac72)
++++ .idea/gradle.xml	(date 1603842006699)
+@@ -1,5 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+@@ -14,6 +15,7 @@
+           </set>
+         </option>
+         <option name="resolveModulePerSourceSet" value="false" />
++        <option name="useQualifiedModuleNames" value="true" />
+       </GradleProjectSettings>
+     </option>
+   </component>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision 43c3df07f82d83bbbe0cf9454b2a120457d7ac72)
++++ .idea/misc.xml	(date 1603842006607)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+Index: app/src/main/res/layout/fragment_contato.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_contato.xml	(revision 43c3df07f82d83bbbe0cf9454b2a120457d7ac72)
++++ app/src/main/res/layout/fragment_contato.xml	(date 1606252386341)
+@@ -12,13 +12,13 @@
+     android:id="@+id/tituloTextView"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+-    android:text="Cadastro de Contato"
++    android:text="Cadastro de Possíveis Destinos"
+     android:layout_marginLeft="16dp"
+     android:layout_marginRight="16dp"
+     android:gravity="center"
+     android:textColor="#FFFFFF"
+     android:textSize="14pt"
+-    android:background="@color/colorPrimary"
++    android:background="@color/corPrimaria"
+     android:layout_marginTop="50dp"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintRight_toRightOf="parent"
+@@ -41,7 +41,7 @@
+         android:layout_height="wrap_content"
+         android:layout_marginTop="16dp"
+         android:text="Clique aqui para alterar a foto"
+-        android:textColor="@color/azul"
++        android:textColor="@color/corPrimaria"
+         app:layout_constraintTop_toBottomOf="@+id/imagemContato"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"/>
+@@ -52,8 +52,8 @@
+     android:id="@+id/editTextNomeC"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+-    android:hint="Nome do Contato"
+-    android:layout_marginTop="16dp"
++    android:hint="Nome do País"
++    android:layout_marginTop="50dp"
+     android:layout_marginLeft="16dp"
+     android:layout_marginRight="16dp"
+     app:layout_constraintTop_toBottomOf="@+id/linkContato"
+@@ -65,7 +65,7 @@
+     android:id="@+id/editTextEmailC"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+-    android:hint="Email"
++    android:hint="Nome da Cidade"
+     android:layout_marginTop="20dp"
+     android:layout_marginLeft="16dp"
+     android:layout_marginRight="16dp"
+@@ -77,7 +77,7 @@
+     android:id="@+id/editTextTelefoneC"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+-    android:hint="Telefone"
++    android:hint="Passagem ida e volta"
+     android:layout_marginTop="20dp"
+     android:layout_marginLeft="16dp"
+     android:layout_marginRight="16dp"
+@@ -85,14 +85,27 @@
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintRight_toRightOf="parent"/>
+ 
+-<Button
++    <EditText
++        android:id="@+id/editTextdestino"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:hint="Diária da Hospedagem"
++        android:layout_marginTop="20dp"
++        android:layout_marginLeft="16dp"
++        android:layout_marginRight="16dp"
++        app:layout_constraintTop_toBottomOf="@+id/editTextTelefoneC"
++        app:layout_constraintLeft_toLeftOf="parent"
++        app:layout_constraintRight_toRightOf="parent"/>
++
++
++    <Button
+     android:id="@+id/buttonSalvarC"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="16dp"
+     android:layout_marginRight="16dp"
+     android:layout_marginBottom="30dp"
+-    android:background="@color/colorPrimary"
++    android:background="@color/corBotao"
+     android:text="Salvar"
+     android:textSize="12pt"
+     android:textColor="#FFFFFF"
+Index: app/src/main/res/menu/menu_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/menu/menu_main.xml	(revision 43c3df07f82d83bbbe0cf9454b2a120457d7ac72)
++++ app/src/main/res/menu/menu_main.xml	(date 1606251960378)
+@@ -6,4 +6,5 @@
+     <item
+         android:id="@+id/sair" android:icon="@drawable/ic_sair" app:showAsAction="always|withText" android:title="Sair"/>
+ 
++
+ </menu>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_perfil.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_perfil.xml	(revision 43c3df07f82d83bbbe0cf9454b2a120457d7ac72)
++++ app/src/main/res/layout/fragment_perfil.xml	(date 1606251960395)
+@@ -14,10 +14,10 @@
+         android:layout_height="wrap_content"
+         android:layout_marginRight="16dp"
+         android:layout_marginLeft="16dp"
+-        android:text="Formulário de Cadastro"
++        android:text="Editar Usuário"
+         android:gravity="center"
+         android:textColor="#ffffff"
+-        android:background="@color/colorPrimary"
++        android:background="@color/corPrimaria"
+         android:textSize="14pt"
+         android:layout_marginTop="48dp"
+         app:layout_constraintTop_toTopOf="parent"
+@@ -80,7 +80,7 @@
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="SALVAR"
+-        android:background="@color/colorPrimary"
++        android:background="@color/corBotao"
+         android:textSize="12pt"
+         android:textColor="#ffffff"
+         android:layout_marginRight="16dp"
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision 43c3df07f82d83bbbe0cf9454b2a120457d7ac72)
++++ app/src/main/res/layout/activity_main.xml	(date 1606251139877)
+@@ -19,7 +19,7 @@
+         android:id="@+id/bottomNav"
+         app:layout_constraintTop_toBottomOf="@id/frameLayout"
+         app:layout_constraintBottom_toBottomOf="parent"
+-        android:background="@color/colorPrimary"
++        android:background="@color/corPrimaria"
+         app:menu="@menu/bottom_nav_menu"
+         app:itemIconTint="@color/branco"
+         app:itemTextColor="@color/branco"
+Index: app/src/main/res/layout/activity_login.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_login.xml	(revision 43c3df07f82d83bbbe0cf9454b2a120457d7ac72)
++++ app/src/main/res/layout/activity_login.xml	(date 1606251139931)
+@@ -13,10 +13,10 @@
+         android:layout_height="wrap_content"
+         android:layout_marginRight="16dp"
+         android:layout_marginLeft="16dp"
+-        android:text="Cadastro de Aluno"
++        android:text="Acesso ao App"
+         android:gravity="center"
+         android:textColor="#ffffff"
+-        android:background="@color/colorPrimary"
++        android:background="@color/corPrimaria"
+         android:textSize="14pt"
+         android:layout_marginTop="48dp"
+         app:layout_constraintTop_toTopOf="parent"
+@@ -53,7 +53,7 @@
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:onClick="novoCadastro"
+-        android:textColor="@color/colorPrimary"
++        android:textColor="@color/corPrimaria"
+         android:text="Novo Cadastro Clique Aqui"
+         android:layout_marginTop="24dp"
+         app:layout_constraintTop_toBottomOf="@+id/editTextSenha"
+@@ -66,7 +66,7 @@
+         android:layout_height="wrap_content"
+         android:onClick="login"
+         android:text="LOGIN"
+-        android:background="@color/colorPrimary"
++        android:background="@color/corBotao"
+         android:textSize="12pt"
+         android:textColor="#ffffff"
+         android:layout_marginRight="16dp"
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/colors.xml	(revision 43c3df07f82d83bbbe0cf9454b2a120457d7ac72)
++++ app/src/main/res/values/colors.xml	(date 1606251139962)
+@@ -8,5 +8,7 @@
+     <color name="branco">#FFFFFF</color>
+     <color name="fundo_card">#F1DCDC</color>
+     <color name="azul">#3F51B5</color>
++    <color name="corPrimaria">#4D05CC</color>
++    <color name="corBotao">#36058E</color>
+ 
+ </resources>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(date 1603842006640)
++++ .idea/vcs.xml	(date 1603842006640)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_configuracao.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_configuracao.xml	(revision 43c3df07f82d83bbbe0cf9454b2a120457d7ac72)
++++ app/src/main/res/layout/fragment_configuracao.xml	(date 1606251139947)
+@@ -16,6 +16,7 @@
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintLeft_toLeftOf="parent"
+-        android:text="FRAGMENT CONFIG" />
++        android:textAlignment="center"
++        android:text="Configurações serão adicionadas nas próximas atualizações" />
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/item_contato.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/item_contato.xml	(revision 43c3df07f82d83bbbe0cf9454b2a120457d7ac72)
++++ app/src/main/res/layout/item_contato.xml	(date 1606251139978)
+@@ -9,7 +9,7 @@
+     android:layout_marginStart="8dp"
+     android:layout_marginEnd="8dp">
+     <androidx.constraintlayout.widget.ConstraintLayout
+-        android:background="@color/fundo_card"
++        android:background="@color/cinza"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+ 
+@@ -38,21 +38,21 @@
+                 <TextView
+                     android:id="@+id/textViewNomeContato"
+                     android:textSize="8pt"
+-                    android:textColor="@color/colorPrimary"
++                    android:textColor="@color/corPrimaria"
+                     android:text="XXXXXXXXXXXXXXXXXXXXXX"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content" />
+                 <TextView
+                     android:id="@+id/textViewEmailContato"
+                     android:textSize="8pt"
+-                    android:textColor="@color/colorPrimary"
++                    android:textColor="@color/corPrimaria"
+                     android:text="XXXXXXXXXXXXXXXXXXXXXXX"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content" />
+                 <TextView
+                     android:id="@+id/textViewTelefoneContato"
+                     android:textSize="8pt"
+-                    android:textColor="@color/colorPrimary"
++                    android:textColor="@color/corPrimaria"
+                     android:text="XXXXXXXXXXXXXXXXXXXXXXX"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content" />
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/compiler.xml	(date 1603842006664)
++++ .idea/compiler.xml	(date 1603842006664)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <bytecodeTargetLevel target="1.8" />
++  </component>
++</project>
+\ No newline at end of file
+Index: app/src/main/res/values/styles.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/styles.xml	(revision 43c3df07f82d83bbbe0cf9454b2a120457d7ac72)
++++ app/src/main/res/values/styles.xml	(date 1606251960352)
+@@ -2,9 +2,9 @@
+     <!-- Base application theme. -->
+     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+         <!-- Customize your theme here. -->
+-        <item name="colorPrimary">@color/colorPrimary</item>
+-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+-        <item name="colorAccent">@color/colorAccent</item>
++        <item name="colorPrimary">@color/corPrimaria</item>
++        <item name="colorPrimaryDark">@color/corBotao</item>
++        <item name="colorAccent">@android:color/holo_blue_light</item>
+     </style>
+ 
+ </resources>
+\ No newline at end of file
+Index: app/src/main/java/br/usjt/ucsist/cadaluno/model/ContatoService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/br/usjt/ucsist/cadaluno/model/ContatoService.java	(revision 43c3df07f82d83bbbe0cf9454b2a120457d7ac72)
++++ app/src/main/java/br/usjt/ucsist/cadaluno/model/ContatoService.java	(date 1605291175657)
+@@ -13,20 +13,20 @@
+ 
+ public interface ContatoService {
+ 
+-    @GET("/api/9b38d23998ef431090b6991a21134338/contato")
++    @GET("/api/b7bceb64c78b4b55b37ffbe9279e905d/contato")
+     Call<List<Contato>> getAllContatos();
+ 
+-    @POST("/api/9b38d23998ef431090b6991a21134338/contato")
++    @POST("/api/b7bceb64c78b4b55b37ffbe9279e905d/contato")
+     Call<ResponseBody> salvarContato(
+             @Body
+                     Contato contato);
+ 
+-    @PUT("/api/9b38d23998ef431090b6991a21134338/contato/{id}")
++    @PUT("/api/b7bceb64c78b4b55b37ffbe9279e905d/contato/{id}")
+     Call<ResponseBody> alterarContato(
+             @Path("id") String id,
+             @Body ContatoPut contatoPut);
+ 
+-    @DELETE("/api/9b38d23998ef431090b6991a21134338/contato/{id}")
++    @DELETE("/api/b7bceb64c78b4b55b37ffbe9279e905d/contato/{id}")
+     Call<ResponseBody> deletarContato(
+             @Path("id") String id);
+ }
+Index: app/src/main/java/br/usjt/ucsist/cadaluno/model/Contato.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/br/usjt/ucsist/cadaluno/model/Contato.java	(revision 43c3df07f82d83bbbe0cf9454b2a120457d7ac72)
++++ app/src/main/java/br/usjt/ucsist/cadaluno/model/Contato.java	(date 1605203483613)
+@@ -4,9 +4,21 @@
+ import com.google.gson.annotations.SerializedName;
+ 
+ import java.io.Serializable;
++import java.util.Date;
+ 
+ public class Contato implements Serializable {
+ 
++
++    private Date data;
++
++    public Date getData() {
++        Date data = null;
++        return data;
++    }
++    public void setData(Date data) {
++        this.data = data;
++    }
++
+     @SerializedName("_id")
+     @Expose
+     private String id;

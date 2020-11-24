@@ -16,6 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:text="FRAGMENT CONFIG" />
+        android:textAlignment="center"
+        android:text="Configurações serão adicionadas nas próximas atualizações" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
