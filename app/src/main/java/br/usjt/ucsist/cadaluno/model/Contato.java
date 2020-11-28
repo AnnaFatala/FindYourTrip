@@ -9,16 +9,6 @@ import java.util.Date;
 public class Contato implements Serializable {
 
 
-    private Date data;
-
-    public Date getData() {
-        Date data = null;
-        return data;
-    }
-    public void setData(Date data) {
-        this.data = data;
-    }
-
     @SerializedName("_id")
     @Expose
     private String id;

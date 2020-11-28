@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "694544380745",
+    "firebase_url": "https://findyourtrip-c82e3.firebaseio.com",
+    "project_id": "findyourtrip-c82e3",
+    "storage_bucket": "findyourtrip-c82e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694544380745:android:1e4b062c4e2372493f6098",
+        "android_client_info": {
+          "package_name": "br.usjt.ucsist.cadaluno"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "694544380745-1iu2lba2ao2qp6esnmd6br7688lgh9ei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCX85QjBtkisxsyKU9THajOVSybF1iyTnw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "694544380745-1iu2lba2ao2qp6esnmd6br7688lgh9ei.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
