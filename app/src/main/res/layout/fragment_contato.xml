@@ -114,5 +114,10 @@ tools:context=".ui.ContatoFragment">
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"/>
+     botao.setOnClickListener(new View.OnClickListener() {
+         public void onClick(View v) {
+             salvarDados();
+         }
+     });
 
 </androidx.constraintlayout.widget.ConstraintLayout>
